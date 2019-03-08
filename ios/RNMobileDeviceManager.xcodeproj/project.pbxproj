@@ -18,6 +18,13 @@
 			remoteGlobalIDString = C91CCA6F1C691C0700E71355;
 			remoteInfo = AppConfigSettingsFramework;
 		};
+		A80FF5272232827700868B74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90374EAA1F9A9D0F0092406A /* AppConfigSettingsFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C91CCA6E1C691C0700E71355;
+			remoteInfo = AppConfigSettingsFramework;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,6 +97,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A80FF5282232827700868B74 /* PBXTargetDependency */,
 			);
 			name = RNMobileDeviceManager;
 			productName = RCTDataManager;
@@ -153,6 +161,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A80FF5282232827700868B74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppConfigSettingsFramework;
+			targetProxy = A80FF5272232827700868B74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		58B511ED1A9E6C8500147676 /* Debug */ = {
