@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#if __has_include("ManagedAppConfigSettings.h")
 #import "ManagedAppConfigSettings.h"
+#else
+@import AppConfigSettingsFramework;
+#endif
 
 @interface MobileDeviceManager : NSObject <RCTBridgeModule, ManagedAppConfigSettingsDelegate>
 @end
