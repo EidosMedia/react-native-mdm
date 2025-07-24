@@ -1,3 +1,4 @@
+
 'use strict';
 
 import {
@@ -5,19 +6,26 @@ import {
   NativeModules
 } from 'react-native';
 
-const {MobileDeviceManager} = NativeModules;
+const MDM = NativeModules.MobileDeviceManager;
 
 export default {
-  ...MobileDeviceManager,
-  addAppConfigListener (callback) {
+  isSupported: MDM?.isSupported,
+  getConfiguration: MDM?.getConfiguration,
+  isAppLockingAllowed: MDM?.isAppLockingAllowed,
+  isAppLocked: MDM?.isAppLocked,
+  lockApp: MDM?.lockApp,
+  unlockApp: MDM?.unlockApp,
+  APP_CONFIG_CHANGED: MDM?.APP_CONFIG_CHANGED,
+  APP_LOCK_STATUS_CHANGED: MDM?.APP_LOCK_STATUS_CHANGED,
+  addAppConfigListener(callback) {
     return DeviceEventEmitter.addListener(
-      MobileDeviceManager.APP_CONFIG_CHANGED,
+      MDM?.APP_CONFIG_CHANGED,
       callback
     );
   },
-  addAppLockListener (callback) {
+  addAppLockListener(callback) {
     return DeviceEventEmitter.addListener(
-      MobileDeviceManager.APP_LOCK_STATUS_CHANGED,
+      MDM?.APP_LOCK_STATUS_CHANGED,
       callback
     );
   }
